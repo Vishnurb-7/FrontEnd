@@ -4,6 +4,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { useDispatch, useSelector } from 'react-redux';
 import { authChange } from '../../features/authSlice';
 import instance from '../../utils/instance';
+import adminLoginImg from "../../../public/adminLogin.jpg"
 
 const AdminLogin = () => {
   const navigate = useNavigate()
@@ -73,7 +74,7 @@ const AdminLogin = () => {
               <button onClick={loginHandler} className='w-[60%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center  hover:bg-black hover:text-white'>Login</button>
           </div>
           <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-          <img src="../../public/adminLogin.jpg" alt="LOGIN" className='w-[75%]' />
+          <img src={adminLoginImg} alt="LOGIN" className='w-[75%]' />
           <h1 className='font-Viaoda text-7xl text-black-500 absolute  top-24'>Make everything easy</h1>
           </div>
 

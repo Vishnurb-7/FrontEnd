@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from '../../utils/axios'
 import { managersAuthChange } from '../../features/managersAuthSlice';
+import logi from "../../../public/plogin.jpg"
 
 
 const ProviderLogin = () => {
@@ -186,7 +187,7 @@ const ProviderLogin = () => {
         {/* <button className='w-[60%] h-20 mt-10 flex flex-row items-center pl-3 text-2xl font-medium border-2 border-black rounded-3xl text-center'><span className='w-[20%] h-20 flex items-center justify-center'><FcGoogle/></span>Login with google</button> */}
       </div>
       <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-      <img src="../../public/plogin.jpg" alt="LOGIN" className='w-[100%]' />
+      <img src={logi} alt="LOGIN" className='w-[100%]' />
         <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3'>Make everything easy</h1>
       </div>
 

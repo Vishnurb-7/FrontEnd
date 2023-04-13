@@ -4,6 +4,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from '../utils/axios';
 import UserOtpModal from '../components/UserOtpModal';
 import SignupWithGoogle from '../components/LoginWithGoogle';
+import logi from "../../public/logi.jpg"
 const Signup = () => {
 
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -219,7 +220,7 @@ const Signup = () => {
         )}
     </div>
     <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-    <img src="../../public/logi.jpg" alt="LOGIN" className='w-[75%]' />
+    <img src={logi} alt="LOGIN" className='w-[75%]' />
         <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3'>Make everything easy</h1>
       </div>
 

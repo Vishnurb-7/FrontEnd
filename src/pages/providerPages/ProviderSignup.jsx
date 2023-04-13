@@ -3,6 +3,9 @@ import { MdBackspace } from 'react-icons/md'
 import { useNavigate } from 'react-router-dom'
 import OtpModal from '../../components/providerComponents/OtpModal'
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import logi from "../../../public/plogin.jpg"
+
+
 const ProviderSignup = () => {
 
 
@@ -527,7 +530,7 @@ const ProviderSignup = () => {
         <p className='mt-5'>Already a member?<a className='text-blue-900 font-semibold cursor-pointer' onClick={loginHandle}>Login</a></p>
       </div>
       <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-      <img src="plogin.jpg" alt="LOGIN" className="w-[100%] top-1 sticky" />
+      <img src={logi} alt="LOGIN" className="w-[100%] top-1 sticky" />
         <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3 top-0 bottom-64 sticky'>Make everything easy</h1>
       </div>
       <OtpModal onClose={addServiceClose} visible={Optmodal} phone={providerData.phone} email={providerData.email} />

@@ -6,6 +6,8 @@ import axios from "../utils/axios";
 import { useDispatch } from "react-redux";
 import { userAuthChange } from "../features/userAuthSlice";
 import { Link } from "react-router-dom";
+import logi from "../../public/logi.jpg"
+import logo from "../../public/logo.png"
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -154,6 +156,7 @@ const Login = () => {
   return (
     <div className="w-full h-[1007px] grid lg:grid-cols-3 md:grid-cols-5 bg-white">
       <div className="md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center">
+      <img src="logo.png" alt="logo" width={330} />
         <h1 className="font-Viaoda text-7xl mb-10">Login</h1>
         <input
           onChange={valueSetting}
@@ -219,7 +222,7 @@ const Login = () => {
         <LoginWithGoogle />
       </div>
       <div className="hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2">
-        <img src="../../public/logi.jpg" alt="LOGIN" className="w-[75%]" />
+        <img src={logi} alt="LOGIN" className="w-[75%]" />
         <h1 className="font-Viaoda text-7xl text-black-500 absolute top-2/3">
           Make everything easy
         </h1>
