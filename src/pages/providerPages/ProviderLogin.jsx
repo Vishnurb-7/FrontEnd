@@ -6,6 +6,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from '../../utils/axios'
 import { managersAuthChange } from '../../features/managersAuthSlice';
 import logi from "../../../public/plogin.jpg"
+import logo from "../../../public/logo1.png"
 
 
 const ProviderLogin = () => {
@@ -158,9 +159,9 @@ const ProviderLogin = () => {
     navigate('/providerSignup')
   }
   return (
-    <div className='w-full h-[1007px] grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
+    <div className='w-full h-[1007px] grid lg:grid-cols-3 items-center bg-white'>
       <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
-        {/* <img src="logo.png" alt="logo" width={330} /> */}
+        <img src={logo} alt="logo" width={330} />
         <h1 className='font-Viaoda text-7xl mb-10'>Login</h1>
         <input onChange={valueSetting} onBlur={emailCheck} type="text" name='email' value={userData.email} placeholder='Email' className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
         {!validation.email.status && (<p className=" text-red-600">{validation.email.message}</p>)}
@@ -186,9 +187,9 @@ const ProviderLogin = () => {
         <Link to={'/managersForgotPassword'} className='mt-3 underline font-semibold text-gray-600'>Forgot password?</Link>
         {/* <button className='w-[60%] h-20 mt-10 flex flex-row items-center pl-3 text-2xl font-medium border-2 border-black rounded-3xl text-center'><span className='w-[20%] h-20 flex items-center justify-center'><FcGoogle/></span>Login with google</button> */}
       </div>
-      <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-      <img src={logi} alt="LOGIN" className='w-[100%]' />
-        <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3'>Make everything easy</h1>
+      <div className='hidden lg:flex items-center flex-col md:col-span-3 lg:col-span-2'>
+      <img src={logi} alt="LOGIN" className='w-[100%] '  />
+        <h1 className='font-Viaoda text-7xl text-black-500 '>Make everything easy</h1>
       </div>
 
 

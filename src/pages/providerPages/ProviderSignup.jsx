@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import OtpModal from '../../components/providerComponents/OtpModal'
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import logi from "../../../public/plogin.jpg"
+import logo from "../../../public/logo1.png"
 
 
 const ProviderSignup = () => {
@@ -386,7 +387,7 @@ const ProviderSignup = () => {
   return (
     <div className='w-full h-full grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
       <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center mb-20'>
-        {/* <img src="logo.png" alt="logo" width={330} /> */}
+        <img src={logo} alt="logo" width={330} />
         <h1 className='font-Viaoda text-7xl mb-10'>Signup</h1>
         <input
           type="text"
@@ -530,8 +531,8 @@ const ProviderSignup = () => {
         <p className='mt-5'>Already a member?<a className='text-blue-900 font-semibold cursor-pointer' onClick={loginHandle}>Login</a></p>
       </div>
       <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-      <img src={logi} alt="LOGIN" className="w-[100%] top-1 sticky" />
-        <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3 top-0 bottom-64 sticky'>Make everything easy</h1>
+      <img src={logi} alt="LOGIN" className="w-[70%] top-1 sticky" />
+        <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3 top-0  sticky'>Make everything easy</h1>
       </div>
       <OtpModal onClose={addServiceClose} visible={Optmodal} phone={providerData.phone} email={providerData.email} />
 

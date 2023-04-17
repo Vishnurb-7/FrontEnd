@@ -5,6 +5,8 @@ import axios from '../utils/axios';
 import UserOtpModal from '../components/UserOtpModal';
 import SignupWithGoogle from '../components/LoginWithGoogle';
 import logi from "../../public/logi.jpg"
+import logo from "../../public/logo1.png"
+
 const Signup = () => {
 
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -176,8 +178,9 @@ const Signup = () => {
   }
 
   return (
-    <div className='w-full h-[1007px] grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
+    <div className='w-full h-[1007px] grid lg:grid-cols-3 items-center bg-white'>
     <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
+        <img src={logo} alt="logo" width={330} />
         <h1 className='font-Viaoda text-7xl mb-10'>Signup</h1>
         <input onChange={valueSetting} onBlur={emailCheck} type="text" name='email' value={userData.email} placeholder='Email' className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
         {!validation.email.status && (
@@ -219,9 +222,9 @@ const Signup = () => {
         <p className=" text-red-600 mt-4">Signup failed! Try again</p>
         )}
     </div>
-    <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-    <img src={logi} alt="LOGIN" className='w-[75%]' />
-        <h1 className='font-Viaoda text-7xl text-black-500 absolute top-2/3'>Make everything easy</h1>
+    <div className='hidden lg:flex items-center flex-col md:col-span-3 lg:col-span-2'>
+    <img src={logi} alt="LOGIN"className="w-[58%]" />
+        <h1 className='font-Viaoda text-7xl text-black-500'>Make everything easy</h1>
       </div>
 
       <UserOtpModal onClose={addServiceClose} visible={Optmodal} phone={ userData.phone} />

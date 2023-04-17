@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { authChange } from '../../features/authSlice';
 import instance from '../../utils/instance';
 import adminLoginImg from "../../../public/adminLogin.jpg"
+import logo from "../../../public/logo1.png"
 
 const AdminLogin = () => {
   const navigate = useNavigate()
@@ -56,8 +57,9 @@ const AdminLogin = () => {
   }
 
   return (
-      <div className='w-full h-[1007px] grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
+      <div className='w-full h-[1007px] grid lg:grid-cols-3 bg-white'>
           <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
+              <img src={logo} alt="logo" width={330} />
               <h1 className='font-Viaoda text-7xl mb-10'>Login</h1>
               <input onChange={valueSetting} type="text" name='name' value={admin.name} placeholder='Email' required className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'/>
         <input onChange={valueSetting} type={passwordType} name='password' value={admin.password} placeholder='Password' required className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
@@ -73,9 +75,9 @@ const AdminLogin = () => {
         { error && <p className='text-red-600'>Invalid username or password</p>}
               <button onClick={loginHandler} className='w-[60%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center  hover:bg-black hover:text-white'>Login</button>
           </div>
-          <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-          <img src={adminLoginImg} alt="LOGIN" className='w-[75%]' />
-          <h1 className='font-Viaoda text-7xl text-black-500 absolute  top-24'>Make everything easy</h1>
+          <div className='hidden lg:flex items-center flex-col md:col-span-3 lg:col-span-2'>
+          <img src={adminLoginImg} alt="LOGIN" className='w-[60%]' />
+          <h1 className='font-Viaoda text-7xl text-black-500 '>Make everything easy</h1>
           </div>
 
 
