@@ -320,7 +320,7 @@ const ProviderSignup = () => {
 
 
 
-            fetch('https://backend-70jj.onrender.com', {
+            fetch('https://backend-70jj.onrender.com/provider/signupEmail', {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
