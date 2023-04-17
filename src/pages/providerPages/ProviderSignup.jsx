@@ -320,7 +320,7 @@ const ProviderSignup = () => {
 
 
 
-            fetch(`http://localhost:8000/provider/signupEmail`, {
+            fetch(import.meta.env.VITE_SERVER, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
