@@ -320,7 +320,7 @@ const ProviderSignup = () => {
 
 
 
-            fetch(import.meta.env.VITE_SERVER, {
+            fetch('https://backend-70jj.onrender.com', {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
