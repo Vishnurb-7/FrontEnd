@@ -536,7 +536,7 @@ const ProviderSignup = () => {
       </div>
       <OtpModal onClose={addServiceClose} visible={Optmodal} phone={providerData.phone} email={providerData.email} />
 
-    </div >
+    </div>
   )
 }
 
