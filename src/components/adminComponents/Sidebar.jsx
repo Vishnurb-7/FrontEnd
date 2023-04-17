@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { authChange ,refreshToken} from "../../features/authSlice";
 import instance from "../../utils/instance";
 import { Link } from "react-router-dom";
+import control from "../../../src/assets/control.png"
 const Sidebar = (props) => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate()
@@ -29,7 +30,7 @@ const Sidebar = (props) => {
         } bg-cyan-900 h-screen p-5  pt-8 relative duration-300`}
       >
         <img
-          src="./src/assets/control.png"
+          src={control}
           className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
            border-2 rounded-full  ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)}
