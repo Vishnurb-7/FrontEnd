@@ -4,13 +4,19 @@ import { useToast } from '@chakra-ui/toast';
 import { Table,  TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react';
 import { MdBackspace } from 'react-icons/md';
 import managerAxios from '../../utils/managerAxios';
-import { useSelector } from 'react-redux';
-import { managersId } from '../../features/managersAuthSlice';
+// import { useSelector } from 'react-redux';
+// import { managersId } from '../../features/managersAuthSlice';
+// import { currentUserId } from '../../features/userAuthSlice';
 
 
-const CreateEstimateModal = ({ visible, onClose,  managerId }) => {
+const CreateEstimateModal = ({ visible, onClose,userId ,managerId }) => {
 
-    const userId = useSelector(managersId)
+    // const userId = useSelector(currentUserId)
+
+    // const userId = useSelector(state => state.currentUserId);
+    console.log("ggg",userId);
+
+    // const id = useSelector()/
     const [service, setService] = useState("");
     const [error, setError] = useState("");
     const [price, setPrice] = useState("");
@@ -65,9 +71,16 @@ const CreateEstimateModal = ({ visible, onClose,  managerId }) => {
     }
 
     const saveHandler = async () => {
+
+        // console.log("checking");
+        // console.log("userId",userId);
+        // console.log("managerId",managerId);
+        // console.log("estimate",estimate);
      
         if (estimate.length > 0) {
+            console.log()
             const response = await managerAxios.post('/provider/addEstimate', { userId, managerId, estimate })
+            console.log("response",response);
             if (response.status === 201) {
                 toast({
                     position: "top",
@@ -113,7 +126,7 @@ const CreateEstimateModal = ({ visible, onClose,  managerId }) => {
                                     return (Number(sum) + Number(amount.price))
                                 }, 0)}
 
-                                </span ></p>
+                                </span></p>
                                 < p className='text-lg font-semibold' > Advance : <span className='text-base font-normal'>{Math.floor(e.estimate.reduce((sum, amount) => { return (Number(sum) + Number(amount.price)) }, 0) / 2)}</span ></p>
                                 <p className='text-lg font-semibold'>Payment : {e.paid == true ? < span className='text-base font-normal'>Completed</span> : < span className='text-base font-normal'>Pending...</span>}</p>
                             </div>
@@ -194,7 +207,7 @@ const CreateEstimateModal = ({ visible, onClose,  managerId }) => {
             </div>
 
 
-        </div >
+        </div>
     )
 }
 

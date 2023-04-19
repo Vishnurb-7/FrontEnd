@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useToast } from '@chakra-ui/toast';
 import { Table,  TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from '@chakra-ui/react';
 import { paymentChange } from '../../features/paymentSlice';
 import { useNavigate } from 'react-router-dom';
 import userAxios from '../../utils/userAxios';
+import { currentUserId } from '../../features/userAuthSlice';
+import CreateEstimateModal from './CreateEstimateModal';
 
-const ShowEstimateModal = ({ visible, onClose, userId, managerId }) => {
+const ShowEstimateModal = ({ visible, onClose, managerId }) => {
+
+    const userId=useSelector(currentUserId  )
+    console.log("userId",userId);
 
     const [estimate, setEstimate] = useState([]);
     const toast = useToast();
@@ -21,9 +26,11 @@ const ShowEstimateModal = ({ visible, onClose, userId, managerId }) => {
 
 
     useEffect(() => {
-   
+   console.log(userId , managerId);
         try {
             userAxios.post('/estimateData', { userId, managerId }).then((response) => {
+
+                console.log("frontend");
 
                 if (response.status === 201) {
                     setEstimate(response.data)
@@ -139,9 +146,13 @@ const ShowEstimateModal = ({ visible, onClose, userId, managerId }) => {
 
                 </div>
             </div>
+            {/* <div style={{display:"none"}}>
+
+            <CreateEstimateModal userId = {userid}/>
+            </div> */}
 
 
-        </div >
+        </div>
     )
 }
 
