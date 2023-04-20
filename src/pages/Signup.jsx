@@ -143,6 +143,7 @@ const Signup = () => {
     const data = { email: userData.email,phone:userData.phone, password: userData.password, };
     try {
       const response = await axios.post("/signup", data);
+      console.log(response);
     
 
 
