@@ -44,7 +44,7 @@ const OrdersCard = ({ data, load, setLoad, type }) => {
     return (
         <div className=' rounded-2xl p-3 bg-white shadow-inner shadow-black hover:scale-105 hover:shadow-2xl hover:duration-300 max-h-[400px] overflow-y-scroll no-scrollbar'>
             <h1 className='text-2xl font-semibold text-center'>{type === "manager" ? userInfo?.email : userInfo?.companyname}</h1>
-            <h3 className='text-xl font-semibold underline'>selected services</h3>
+            <h3 className='text-xl font-semibold'>Selected Services</h3>
             <ul className='m-4'>
                 {data?.estimate && data.estimate.map((element) => (
                     <li className='list-decimal list-inside'>{element.service}</li>
@@ -52,7 +52,7 @@ const OrdersCard = ({ data, load, setLoad, type }) => {
 
 
             </ul>
-            <h3 className='text-xl font-semibold underline'>description</h3>
+            <h3 className='text-xl font-semibold '>Description</h3>
             <p className='mt-3 m-3'>{data?.description ? data.description : "Add Description"}</p>
 
             {type == "manager" && <div> < Button onClick={() => setEdit(!edit)}>Edit Description</Button>

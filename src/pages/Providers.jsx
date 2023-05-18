@@ -91,7 +91,7 @@ const Providers = () => {
     <div className='w-full'>
       <Navebar />
       <div className='lg:max-w-[1600px] md:max-w-[900px] max-w-[400px] mx-auto'>
-        <div className='flex justify-between items-center'>
+        <div className='mx-auto md:mx-0 md:flex justify-between items-center'>
           <h2 className='font-Volkhov text-4xl font-bold m-10 uppercase'>{service}</h2>
           <select className='text-xl font-medium p-2 h-14 mr-10 border-2 border-black rounded-full bg-transparent' onChange={(e) => setLocation(e.target.value)} value={location} name="location" id="">
 

@@ -61,7 +61,7 @@ const SearchBox = () => {
       <input
   type="text"
   placeholder="Search for services"
-  className="w-56 h-16 py-2 pl-10 pr-4 text-gray-700  bg-gray-200 rounded-md focus:outline-none focus:bg-white focus:text-gray-900"
+  className="w-56 md:w-64 sm:h-14 rounded-full py-2 pl-10 pr-4 text-gray-700  bg-gray-200 focus:outline-none focus:bg-white focus:text-gray-900 shadow-inner"
   value={query}
   onChange={handleChange}
   onKeyDown={handleKeyDown}

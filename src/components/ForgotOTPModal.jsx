@@ -53,8 +53,8 @@ const ForgotOTPModal = ({ visible, onClose, phone }) => {
           setError(true);
         }
       } catch (error) {
-      
-        alert("server failed")
+       
+        if(error.response.data === "invalid otp") setError(true)
       }
 
 
@@ -77,8 +77,8 @@ const ForgotOTPModal = ({ visible, onClose, phone }) => {
   return (
     <div id='container' onClick={handleOnClose} className='z-10 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center'>
 
-      <div className='bg-slate-300 w-[700px] h-[700px] flex flex-col rounded-3xl m-2'>
-        <div className='flex flex-row-reverse text-4xl p-4 border-b-2 border-black'>
+      <div className='bg-slate-300 w-[350px] md:w-[500px] md:h-[500px] h-[300px] flex flex-col rounded-3xl m-2'>
+        <div className='flex flex-row-reverse text-4xl p-4 md:border-b-2 md:border-black'>
           <button onClick={onClose} ><AiFillCloseCircle /></button>
         </div>
         <div className='h-full w-full flex items-center justify-center flex-col'>
@@ -87,8 +87,8 @@ const ForgotOTPModal = ({ visible, onClose, phone }) => {
           <OtpInput
             value={otp}
             onChange={handleChange}
-            separator={<span className="p-4 shadow-2xl"> </span>}
-            inputStyle="md:text-7xl text-4xl shadow-2xl border-2   rounded-xl"
+            separator={<span className="p-2 shadow-2xl"> </span>}
+            inputStyle="md:text-5xl text-4xl shadow-2xl border-2   rounded-xl"
             numInputs={6}
             isInputNum={true}
           >

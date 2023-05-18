@@ -55,13 +55,13 @@ const ChangePassword = () => {
   }
 
   return (
-    <div className='w-full h-[1007px] grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
-      <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
+    <div className='w-full h-screen grid lg:grid-cols-3 md:grid-cols-5 bg-white'>
+      <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center text-center'>
         {/* <img src="logo.png" alt="logo" width={330} /> */}
         <h1 className='text-3xl font-semibold font-sans'>Enter new password</h1>
-        <input onChange={(e) => { setPassword(e.target.value) }} type={passwordType} name='password' value={password} placeholder='Password' className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
+        <input onChange={(e) => { setPassword(e.target.value) }} type={passwordType} name='password' value={password} placeholder='Password' className="w-[90%] h-16 mt-8 text-2xl border-2 border-black rounded-full bg-gray-200 text-center" />
         <p className="relative w-full ">
-          <i className="absolute right-10 bottom-6 bg-white z-10 pl-2" onClick={passwordTypeChange}>
+          <i className="absolute right-10 bottom-4 bg-transparent z-10 pl-2" onClick={passwordTypeChange}>
             {passwordVisible ? (
               <FiEye size={38} opacity={0.6} />
             ) : (
@@ -71,14 +71,14 @@ const ChangePassword = () => {
         </p>
         {<p className="text-red-500">{errMsg}</p>}
 
-        <button onClick={submitHandler} className='w-[60%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center hover:scale-105 hover:bg-black hover:text-white'>Save</button>
+        <button onClick={submitHandler} className='w-[46%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center hover:scale-105 hover:bg-black hover:text-white'>Save</button>
 
         {/* <Link to={'/login'} className='mt-3 underline font-semibold text-gray-600'>Cancel?</Link> */}
 
       </div>
-      <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2'>
-      <img src="../../public/logi.jpg" alt="LOGIN" className='w-[75%]' />
-        <h1 className='font-Viaoda text-7xl text-gray-500 absolute top-2/3'>Make everything easy</h1>
+      <div className='hidden md:flex items-center flex-col md:col-span-3 lg:col-span-2 text-center'>
+      <img src="../../public/logi.jpg" alt="LOGIN" className='w-1/2 h-2/3 my-auto' />
+        <h1 className='font-Viaoda text-7xl text-gray-500 mb-10 top-2/3'>Make everything easy</h1>
       </div>
 
     </div>

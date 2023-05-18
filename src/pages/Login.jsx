@@ -6,8 +6,8 @@ import axios from "../utils/axios";
 import { useDispatch } from "react-redux";
 import { userAuthChange } from "../features/userAuthSlice";
 import { Link } from "react-router-dom";
-import logi from "../../public/logi.jpg"
-import logo from "../../public/logo.png"
+import logi from "../../public/logi.jpg";
+import logo from "../../public/logo.png";
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -64,7 +64,6 @@ const Login = () => {
           message: "is this really your email ?",
         },
       }));
-     
 
       return false;
     } else {
@@ -88,7 +87,7 @@ const Login = () => {
           message: "password  must be more than 8 character",
         },
       }));
-     
+
       return false;
     } else {
       setValidation((prevState) => ({
@@ -108,9 +107,8 @@ const Login = () => {
     const data = { email: userData.email, password: userData.password };
 
     axios
-      .post("/login", data).then((response) => {
-
-  
+      .post("/login", data)
+      .then((response) => {
         const { accessToken, refreshToken, user, id } = response.data;
 
         const disp = dispatch(
@@ -130,7 +128,7 @@ const Login = () => {
         return true;
       })
       .catch((err) => {
-        if(err.response.data.message){
+        if (err.response.data.message) {
           setValidation((prevState) => ({
             ...prevState,
             signupError: {
@@ -143,7 +141,7 @@ const Login = () => {
             ...prevState,
             signupError: {
               value: false,
-              message: 'something went wrong',
+              message: "something went wrong",
             },
           }));
         }
@@ -155,10 +153,10 @@ const Login = () => {
     navigate("/signup");
   };
   return (
-    <div className="w-full h-[1007px] grid lg:grid-cols-3 items-center bg-white">
+    <div className="w-full min-h-screen grid lg:grid-cols-3 items-center bg-white">
       <div className="md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center">
-      <img src={logo} alt="logo" width={330} />
-        <h1 className="font-Viaoda text-7xl mb-10">Login</h1>
+        <img src={logo} alt="logo" width={200} />
+        <h1 className="font-Viaoda text-6xl mb-10">Login</h1>
         <input
           onChange={valueSetting}
           onBlur={emailCheck}
@@ -166,7 +164,7 @@ const Login = () => {
           name="email"
           value={userData.email}
           placeholder="Email"
-          className="w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center"
+          className="w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center"
         />
         {!validation.email.status && (
           <p className=" text-red-600">{validation.email.message}</p>
@@ -178,11 +176,11 @@ const Login = () => {
           name="password"
           value={userData.password}
           placeholder="Password"
-          className="w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center"
+          className="w-[90%] h-16 mt-8 text-2xl border-2 border-black rounded-full bg-gray-200 text-center"
         />
         <p className="relative w-full ">
           <i
-            className="absolute right-10 bottom-6 bg-white z-10 pl-2"
+            className="absolute right-10 bottom-3.5 bg-transparent z-10 pl-2"
             onClick={passwordTypeChange}
           >
             {passwordVisible ? (
@@ -197,7 +195,7 @@ const Login = () => {
       )} */}
         <button
           onClick={loginHandler}
-          className="w-[60%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center hover:scale-105 hover:bg-black hover:text-white"
+          className="w-[60%] h-16 duration-200 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center hover:scale-105 hover:bg-black hover:text-white"
         >
           Login
         </button>

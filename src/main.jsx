@@ -19,7 +19,7 @@ const theme = extendTheme({
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}> 
       <ChakraProvider theme={theme}>
@@ -31,5 +31,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </ChakraProvider>
       </PersistGate>
     </Provider>
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )

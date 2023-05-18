@@ -179,11 +179,11 @@ const Signup = () => {
   }
 
   return (
-    <div className='w-full h-[1007px] grid lg:grid-cols-3 items-center bg-white'>
+    <div className='w-full h-screen  grid lg:grid-cols-3 items-center bg-white'>
     <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
-        <img src={logo} alt="logo" width={330} />
-        <h1 className='font-Viaoda text-7xl mb-10'>Signup</h1>
-        <input onChange={valueSetting} onBlur={emailCheck} type="text" name='email' value={userData.email} placeholder='Email' className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
+    <img src={logo} alt="logo" width={200} />
+        <h1 className='font-Viaoda text-6xl mb-10'>Signup</h1>
+        <input onChange={valueSetting} onBlur={emailCheck} type="text" name='email' value={userData.email} placeholder='Email' className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center' />
         {!validation.email.status && (
         <p className=" text-red-600">{validation.email.message}</p>
         )}
@@ -194,14 +194,14 @@ const Signup = () => {
           onChange={valueSetting}
           onBlur={PhoneCheck}
           placeholder='Phone'
-          className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         {!validation.phone.status && (
         <p className=" text-red-600">{validation.phone.message}</p>
       )}
-        <input onChange={valueSetting} onBlur={passwordCheck} type={passwordType} name='password' value={userData.password} placeholder='Password' className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center' />
+        <input onChange={valueSetting} onBlur={passwordCheck} type={passwordType} name='password' value={userData.password} placeholder='Password' className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center' />
         <p className="relative w-full ">
-          <i className="absolute right-10 bottom-6 bg-white z-10 pl-2" onClick={passwordTypeChange}>
+          <i className="absolute right-12 bottom-3.5  bg-transparent z-10 pl-2" onClick={passwordTypeChange}>
             {passwordVisible ? (
               <FiEye size={38} opacity={0.6} />
             ) : (
@@ -212,7 +212,7 @@ const Signup = () => {
         {!validation.password.status && (
         <p className=" text-red-600">{validation.password.message}</p>
       )}
-        <button onClick={signupHandler} className='w-[60%] h-20 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center'>Signup</button>
+        <button onClick={signupHandler} className='"w-[60%] h-16 px-10  hover:text-white  duration-200 mt-10 text-3xl font-semibold border-2 border-black rounded-3xl text-center hover:scale-105 hover:bg-black hover:text-white"'>Signup</button>
         {!validation.signupError.status && (
         <p className=" text-red-600">{validation.signupError.message}</p>
       )}

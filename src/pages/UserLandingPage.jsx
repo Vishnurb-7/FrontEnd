@@ -27,8 +27,8 @@ const UserLandingPage = () => {
 
       <Banner />
       <div id='services' className='w-full pt-20 md:pt-40'>
-        <h1 className='uppercase font-Volkhov m-7 text-2xl md:text-4xl lg:text-5xl text-center'>services</h1>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-[1300px] mx-auto'>
+        <h1 className='uppercase font-Volkhov m-7 center text-2xl md:text-4xl md:p-24 lg:text-5xl text-center'>services</h1>
+        <div className='grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 max-w-[1300px] mx-auto gap-4'>
           <ServiceCard key="1"
             serviceClick={(end = "Wedding planning") => serviceClickHandler(end)}
             url="/serviceImages/bride-groom-getting-married_52683-32275.png"

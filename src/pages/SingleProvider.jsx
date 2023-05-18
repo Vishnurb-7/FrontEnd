@@ -102,7 +102,7 @@ const SingleProvider = () => {
 
         {/* <ServicesCard text="wedding planning" /> */}
         {data.category ?
-          <div className='grid grid-flow-col gap-3 overflow-x-scroll show-scrollbar mb-10 col-span-3'>
+          <div className='grid grid-flow-col  gap-3 overflow-x-scroll show-scrollbar mb-10 col-span-3'>
 
             {data.category.map((elements) => {
               return <ServicesCard text={elements} />
@@ -111,7 +111,7 @@ const SingleProvider = () => {
           : <h1>Services not available</h1>}
 
       </div>
-      <div className='mx-auto pl-2 pr-2 max-w-[400px] md:max-w-[900px] lg:max-w-[1500px] mt-16'>
+      <div className='mx-auto pl-2 pr-2 max-w-[400px] md:max-w-[900px]  lg:max-w-[1500px] mt-16'>
         <h3 className='text-3xl font-semibold font-Volkhov mb-10'>Galary</h3>
 
         {data.gallery ?
@@ -132,7 +132,7 @@ const SingleProvider = () => {
           <p className='text-center'>{data.companyname}</p>
           <p className='text-center'>{data != "" && data.place.join(" , ")}</p>
           <p className='text-center underline'><a href={"mailto:" + data.email}>{data.email}</a></p>
-          <p className='text-center underline'><a href={"tel:" + data.mobile}>{data.mobile}</a></p>
+          <p className='text-center underline pb-5'><a href={"tel:" + data.mobile}>{data.mobile}</a></p>
 
         </div>
 
