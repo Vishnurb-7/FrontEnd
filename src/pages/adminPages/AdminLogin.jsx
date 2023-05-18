@@ -64,7 +64,7 @@ const AdminLogin = () => {
               <input onChange={valueSetting} type="text" name='name' value={admin.name} placeholder='Email' required className="w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center"/>
         <input onChange={valueSetting} type={passwordType} name='password' value={admin.password} placeholder='Password' required className="w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center" />
         <p className="relative w-full ">
-          <i className="absolute right-10 bottom-6 bg-white z-10 pl-2" onClick={passwordTypeChange}>
+          <i className="absolute right-10 bottom-3.5 bg-transparent z-10 pl-2" onClick={passwordTypeChange}>
             {passwordVisible ? (
               <FiEye size={38} opacity={0.6} />
             ) : (
