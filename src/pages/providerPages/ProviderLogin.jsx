@@ -167,7 +167,7 @@ const ProviderLogin = () => {
         {!validation.email.status && (<p className=" text-red-600">{validation.email.message}</p>)}
         <input onChange={valueSetting} onBlur={passwordCheck} type={passwordType} name='password' value={userData.password} placeholder='Password' className="w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center" />
         <p className="relative w-full ">
-          <i className="absolute right-10 bottom-6 bg-white z-10 pl-2" onClick={passwordTypeChange}>
+          <i className="absolute right-10 bottom-3.5 bg-transparent z-10 pl-2" onClick={passwordTypeChange}>
             {passwordVisible ? (
               <FiEye size={38} opacity={0.6} />
             ) : (
