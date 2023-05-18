@@ -447,7 +447,7 @@ const ProviderSignup = () => {
             value=""
             onChange={selectPlace}
             onBlur={placeCheck}
-            className='h-12 bottom-0 border-none  w-full text-center rounded-3xl'>
+            className='h-12 bottom-0 border-none  w-10/12 text-center rounded-full'>
             <option value="#">-- Select Places --</option>
             <option value="Alappuzha" >Alappuzha</option>
             <option value="Ernakulam">Ernakulam</option>
