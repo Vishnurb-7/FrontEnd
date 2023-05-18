@@ -320,8 +320,8 @@ const ProviderSignup = () => {
 
 
 
-            // fetch(`https://backend-70jj.onrender.com/provider/signupEmail`, {
-              fetch(`http://localhost:8000/provider/signupEmail`, {
+            fetch(`https://backend-70jj.onrender.com/provider/signupEmail`, {
+              // fetch(`http://localhost:8000/provider/signupEmail`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
