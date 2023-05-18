@@ -57,7 +57,7 @@ const AdminLogin = () => {
   }
 
   return (
-      <div className='w-full h-[1007px] grid lg:grid-cols-3 bg-white'>
+      <div className='w-full grid lg:grid-cols-3 bg-white'>
           <div className='md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center'>
               <img src={logo} alt="logo" width={330} />
               <h1 className='font-Viaoda text-7xl mb-10'>Login</h1>
