@@ -397,7 +397,7 @@ const ProviderSignup = () => {
           onChange={valueSetting}
           onBlur={nameCheck}
           value={providerData.companyName}
-          className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         {!validation.companyName.status && (
           <p className=" text-red-600">{validation.companyName.message}</p>
@@ -408,11 +408,11 @@ const ProviderSignup = () => {
           onChange={valueSetting}
           onBlur={descriptionCheck}
           value={providerData.description}
-          className='w-[90%] max-h-40 mt-10 text-3xl border-2 border-black rounded-3xl text-center show-scrollbar'></textarea>
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center show-scrollbar'></textarea>
         {!validation.description.status && (
           <p className=" text-red-600">{validation.description.message}</p>
         )}
-        <div className='w-[90%] mt-10 text-3xl border-2 border-black rounded-3xl text-center flex flex-col items-center justify-center break-words'>
+        <div className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center flex flex-col items-center justify-center break-words'>
           <div className=' w-[90%] break-words'>{services.join(' , ')}</div>
           <MdBackspace onClick={backService} className='self-end mr-2' />
           <select
@@ -439,7 +439,7 @@ const ProviderSignup = () => {
         {!validation.services.status && (
           <p className=" text-red-600">{validation.services.message}</p>
         )}
-        <div className='w-[90%] mt-10 text-3xl border-2 border-black rounded-3xl text-center flex flex-col items-center justify-center break-words'>
+        <div className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center flex flex-col items-center justify-center break-words'>
           <div className=' w-[90%] break-words'>{place.join(' , ')}</div>
           <MdBackspace onClick={backPlace} className='self-end mr-2' />
           <select
@@ -475,7 +475,7 @@ const ProviderSignup = () => {
           onChange={valueSetting}
           onBlur={PhoneCheck}
           placeholder='Phone'
-          className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         {!validation.phone.status && (
           <p className=" text-red-600">{validation.phone.message}</p>
@@ -487,7 +487,7 @@ const ProviderSignup = () => {
           onChange={valueSetting}
           onBlur={emailCheck}
           placeholder='Email'
-          className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         {!validation.email.status && (
           <p className=" text-red-600">{validation.email.message}</p>
@@ -499,7 +499,7 @@ const ProviderSignup = () => {
           onChange={valueSetting}
           onBlur={passwordCheck}
           placeholder='Password'
-          className='w-[90%] h-20 mt-10 text-3xl border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         <p className="relative w-full ">
           <i className="absolute right-10 bottom-6 z-10 pl-2" onClick={passwordTypeChange}>
@@ -519,7 +519,7 @@ const ProviderSignup = () => {
           value={providerData.certificate}
           accept=".png,.jpeg,.webp,.jpg"
           onChange={(e) => setImage(e.target.files[0])}
-          className='w-[90%] h-20 mt-10 text-3xl p-4 border-2 border-black rounded-3xl text-center'
+          className='w-[90%] h-16 mt-6 text-2xl bg-gray-200 border-2 border-black rounded-full text-center'
         />
         <label htmlFor="file">Gov.Approved Certificate</label>
         {imageError && <p className='text-red-500'>Select one image</p>}
