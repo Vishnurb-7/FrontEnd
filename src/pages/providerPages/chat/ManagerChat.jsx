@@ -43,7 +43,7 @@ const ManagerChat = () => {
 
     // Connect to Socket.io
     useEffect(() => {
-        socket.current = io("ws://localhost:8080");
+        socket.current = io(import.meta.env.VITE_APP_SOCKET_URL);
         socket.current.emit("new-user-add", userId);
         socket.current.on("get-users", (users) => {
             setOnlineUsers(users);
